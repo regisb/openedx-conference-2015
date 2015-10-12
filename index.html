@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>France Université Numérique: Life in the Avant-garde</title>
+
+		<meta name="description" content="Open edX as a French public service">
+		<meta name="author" content="Régis Behmo">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <style>
+            .reveal .slide-number {
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .full-width {
+                width: 100%;
+            }
+            .reveal .dim p:not(.undim) {
+                color: #837E7E;
+            }
+            .table {
+                display: table;
+            }
+            .table-row {
+                display: table-row;
+            }
+            .table-cell {
+                display: table-cell;
+            }
+            .reveal .sidespace {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .reveal .bottom-border {
+                border-bottom: 2px solid white;
+            }
+            .reveal .right-border {
+                border-right: 2px solid white;
+            }
+        </style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>France Université Numérique</h1>
+					<h3>Life in the Avant-garde</h3>
+					<p>
+                    <a href="http://hakim.se">Régis Behmo</a> (<a href="http://github.com/regisb">@regisb</a>) <br>
+                    Open edX Conference, October 12 2015 | Wellesley, MA
+					</p>
+				</section>
+
+				<section class="no-slide-number">
+					<h3>France Université Numérique: Life in the Avant-garde</h3>
+                    <br>
+                    <p class="fragment"><i class="fa fa-plug"></i> Integration with Open edX</p>
+                    <p class="fragment"><i class="fa fa-tachometer"></i> Dashboards</p>
+                    <p class="fragment"><i class="fa fa-cube"></i> XBlocks</p>
+                    <p class="fragment"><i class="fa fa-empire"></i> Issues</p>
+				</section>
+
+                <section>
+                    <h3>France Université Numérique  <span class="fragment">(FUN)</span></h3>
+                    <ul class="fragment">
+                        <li>193 courses</li>
+                        <li>61 universities</li>
+                        <li>1M course enrollments</li>
+                        <li>420k users from 213 countries</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>France Université Numérique (FUN)</h3>
+                    <div class="fragment">
+                        <p>
+                            <a href="https://www.france-universite-numerique-mooc.fr/">https://www.france-universite-numerique-mooc.fr/</a>
+                            <img src="./img/fun-now.png">
+                        </p>
+                    </div>
+                </section>
+                <section data-background="./img/usermap.png"></section>
+
+                <!--OpenedX Hackathon-->
+                <section>
+                    <h3>France Université Numérique (FUN)</h3>
+                    <p><a href="http://hack.openedx.fr/">http://hack.openedx.fr/</a></p>
+                    <img src="./img/openedxhack.png">
+                </section>
+
+                <section>
+                    <h3>France Université Numérique (FUN)</h3>
+                    <p>
+                        <a href="https://github.com/openfun/">https://github.com/openfun/</a>
+                        <img src="./img/github.png">
+                    </p>
+                </section>
+
+                <section>
+                    <h3>France Université Numérique (FUN)</h3>
+                    <p><a href="https://github.com/openfun/">https://github.com/openfun/</a></p>
+                    <pre><code>$ grep openfun edx-platform/AUTHORS 
+Régis Behmo &lt;regis.behmo@openfun.fr&gt;      # @regisb
+Sylvain Toé &lt;sylvain.toe@openfun.fr&gt;      # @lazybird
+Richard Moch &lt;richard.moch@openfun.fr&gt;    # @rmoch 
+Julien Paillé &lt;julien.paille@openfun.fr&gt;  # @jpaille</code></pre>
+                </section>
+
+                <section>
+                    <h3>fork?</h3>
+                    <div class="table">
+                        <div class="table-row fragment">
+                            <div class="table-cell"><p>Permanent fork</p></div>
+                            <div class="table-cell"><img src="./img/fork-model-1.png" style="width: 100%; vertical-align: middle;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--FUN vs edx vs FLOSS contributors-->
+                <section>
+                    <div>
+                        <table>
+                            <tr>
+                                <td style="width: 33%;">FUN</td>
+                                <td style="width: 33%;" class="fragment" data-fragment-index="1">edX</td>
+                                <td style="width: 33%;" class="fragment" data-fragment-index="2">Open edX contributors <br>
+                                    <small><code>wc -l edx-platform/AUTHORS</code></small></td>
+                            </tr>
+                            <tr style="font-size: 50%;">
+                                <td>
+                                    <span class="population" data-population="4" style="color: green;"></span><span class="population" data-population="6"></span>
+                                </td>
+                                <td class="fragment" data-fragment-index="1">
+                                    <span class="population" data-population="50" style="color: green;"></span><span class="population" data-population="90"></span>
+                                </td>
+                                <td class="fragment" data-fragment-index="2">
+                                    <span class="population" data-population="240" style="color: green;"></span>
+                                </td>
+                            </tr>
+                        </table>
+                        <p><span class="population" data-population="1" style="color: green;"></span> developer</p>
+                        <p><span class="population" data-population="1"></span> non-developer</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>fork?</h3>
+                    <div class="table">
+                        <div class="table-row">
+                            <div class="table-cell"><p>Permanent fork</p></div>
+                            <div class="table-cell"><img src="./img/fork-model-1.png" style="width: 100%; vertical-align: middle;"></div>
+                            <div class="table-cell"><i class="fa fa-bomb"></i></div>
+                        </div>
+                        <div class="table-row fragment">
+                            <div class="table-cell"><p>Regularly-updated fork</p></div>
+                            <div class="table-cell"><img src="./img/fork-model-2.png" style="width: 100%; vertical-align: middle;"></div>
+                            <div class="table-cell"><i class="fa fa-check"></i></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>fork?</h3>
+                    <img class="fragment" src="./img/edx-fork.png">
+                </section>
+
+                <!-- I) Integration with Open edX -->
+                <section>
+                    <div class="dim">
+                        <p class="undim"><i class="fa fa-plug"></i> Integration with Open edX</p>
+                        <p><i class="fa fa-tachometer"></i> Dashboards</p>
+                        <p><i class="fa fa-cube"></i> XBlocks</p>
+                        <p><i class="fa fa-empire"></i> Issues</p>
+                    </div>
+				</section>
+
+                <section>
+                    <h3><i class="fa fa-plug"></i> Upstream integration</h3>
+                    <pre class="fragment"><code>$ cd edx-platform && git log | grep openfun
+    Merge pull request #9590 from openfun/openfun/fix-dropdown-problem-template
+    Merge pull request #8725 from openfun/regisb/fix_xblock_class_loading
+    Merge pull request #7474 from openfun/rmoch/fix_forum_action_button_issue
+    Merge pull request #7997 from openfun/rmoch/i18n_problem_explanation_title
+    Merge pull request #7101 from openfun/fun/xblock-authoring-fix-settings-import
+    Merge pull request #6560 from openfun/openfun/studio-csrf-error
+    Merge pull request #6082 from openfun/edx/translate-enrollment-emails</code></pre>
+
+                    <pre class="fragment"><code>$ cd edx-ora2 && git log | grep openfun
+    Merge pull request #640 from openfun/edx/multiple-fileupload-backends
+    Merge pull request #681 from openfun/openfun/fix-vagrantfile</pre></code>
+                </section>
+
+                <section>
+                    <h3><i class="fa fa-plug"></i> Plugging FUN <i class="fa fa-arrow-right"></i> edx-platform</h3>
+
+                    <ol class="full-width">
+                        <li><pre><code>pip install fun-cmd</code></pre></li>
+                        <li><pre><code>fun lms.dev run</code></pre>
+                            <ul>
+                                <li><pre><code>sys.path.append("/edx/app/edxapp/fun-apps/")</code></pre></li>
+                                <li><pre><code>/edx/app/edxapp/fun-apps/fun/envs/lms/dev.py</code></pre></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3><i class="fa fa-plug"></i> Patching Open edX</h3>
+                    <table>
+                        <tr class="bottom-border" style="text-align: center;">
+                            <th class="right-border" style="text-align: center;">Easy</th>
+                            <th class="right-border" style="text-align: center;">Medium</th>
+                            <th style="text-align: center;">Hard</th>
+                        </tr>
+                        <tr>
+                            <td class="right-border">Modify settings</td>
+                            <td class="right-border">Patch code</td>
+                            <td>Patch dependency code</td>
+                        </tr>
+                        <tr>
+                            <td class="right-border">
+                                <ul style="vertical-align: middle;">
+                                    <li>Patch FUN settings</li>
+                                </ul>
+                            </td>
+                            <td class="right-border">
+                                <ul style="vertical-align: middle;">
+                                    <li>Patch edx-platform</li>
+                                    <li>Maintain patch</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="vertical-align: middle;">
+                                    <li>Patch dependency</li>
+                                    <li>Patch edx-platform requirements</li>
+                                    <li>Maintain 2 patches</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h3><i class="fa fa-plug"></i> The FUN devstack</h3>
+                    <ul>
+                        <li><a href="https://github.com/openfun/fun-boxes">https://github.com/openfun/fun-boxes</a></li>
+                        <li><a href="http://files.alt.openfun.fr/vagrant-images">http://files.alt.openfun.fr/vagrant-images</a></li>
+                    </ul>
+                </section>
+
+                <!--Backoffice-->
+                <section>
+                    <div class="table">
+                        <div class="dim table-row">
+                            <div class="table-cell">
+                                <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                                <p class="undim"><i class="fa fa-tachometer"></i> Dashboards</p>
+                                <p><i class="fa fa-cube"></i> XBlocks</p>
+                                <p><i class="fa fa-empire"></i> Issues</p>
+                            </div>
+                            <div class="table-cell">
+                                <p class="undim">Backoffice</p>
+                                <p>Course dashboard</p>
+                                <p>Video upload manager</p>
+                                <p>Kibana dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <section data-background="./img/backoffice-1.png">
+                </section>
+                <section data-background="./img/backoffice-2.png">
+                </section>
+
+                <!--Course dashboard-->
+                <section>
+                    <div class="table">
+                        <div class="dim table-row">
+                            <div class="table-cell">
+                                <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                                <p class="undim"><i class="fa fa-tachometer"></i> Dashboards</p>
+                                <p><i class="fa fa-cube"></i> XBlocks</p>
+                                <p><i class="fa fa-empire"></i> Issues</p>
+                            </div>
+                            <div class="table-cell">
+                                <p>Backoffice</p>
+                                <p class="undim">Course dashboard</p>
+                                <p>Video upload manager</p>
+                                <p>Kibana dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <section data-background="./img/course-dashboard-1.png">
+                </section>
+                <section data-background="./img/course-dashboard-2.png">
+                </section>
+                <section data-background="./img/course-dashboard-3.png">
+                </section>
+
+                <!--Video upload-->
+                <section>
+                    <div class="table">
+                        <div class="dim table-row">
+                            <div class="table-cell">
+                                <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                                <p class="undim"><i class="fa fa-tachometer"></i> Dashboards</p>
+                                <p><i class="fa fa-cube"></i> XBlocks</p>
+                                <p><i class="fa fa-empire"></i> Issues</p>
+                            </div>
+                            <div class="table-cell">
+                                <p>Backoffice</p>
+                                <p>Course dashboard</p>
+                                <p class="undim">Video upload manager</p>
+                                <p>Kibana dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <section data-background="./img/videoupload-1.png"></section>
+                <section data-background="./img/videoupload-2.png"></section>
+
+                <!-- ELK -->
+                <section>
+                    <div class="table">
+                        <div class="dim table-row">
+                            <div class="table-cell">
+                                <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                                <p class="undim"><i class="fa fa-tachometer"></i> Dashboards</p>
+                                <p><i class="fa fa-cube"></i> XBlocks</p>
+                                <p><i class="fa fa-empire"></i> Issues</p>
+                            </div>
+                            <div class="table-cell">
+                                <p>Backoffice</p>
+                                <p>Course dashboard</p>
+                                <p>Video upload manager</p>
+                                <p class="undim">Kibana dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <section>
+                    <img src="./img/kibana.png">
+                    <p><a href="https://github.com/openfun/fun-logstash">https://github.com/openfun/fun-logstash</a></p>
+                </section>
+
+
+                <!-- II) XBlocks -->
+                <section>
+                    <div class="dim">
+                        <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                        <p><i class="fa fa-tachometer"></i> Dashboards</p>
+                        <p class="undim"><i class="fa fa-cube"></i> XBlocks</p>
+                        <p><i class="fa fa-empire"></i> Issues</p>
+                    </div>
+				</section>
+
+                <!--GEA xblock-->
+                <section>
+                    <h3><i class="fa fa-cube"></i> XBlocks: Graded external assignment</h3>
+                    <p><a href="https://github.com/openfun/edx-gea/">https://github.com/openfun/edx-gea/</a></p>
+                    <img src="./img/gea-assessment-cms.png" class="fragment">
+                </section>
+                <section>
+                    <h3><i class="fa fa-cube"></i> XBlocks: Graded external assignment</h3>
+                    <p><a href="https://github.com/openfun/edx-gea/">https://github.com/openfun/edx-gea/</a></p>
+                    <img src="./img/gea-assessment-file.png">
+                </section>
+
+                <!--Password container xblock-->
+                <section>
+                    <h3><i class="fa fa-cube"></i> XBlocks: Password-protected, time-limited container</h3>
+                    <p><a href="https://github.com/openfun/password-container-xblock/">https://github.com/openfun/password-container-xblock/</a></p>
+                    <img src="./img/password-container-1.png">
+                </section>
+                <section>
+                    <h3><i class="fa fa-cube"></i> XBlocks: Password-protected, time-limited container</h3>
+                    <p><a href="https://github.com/openfun/password-container-xblock/">https://github.com/openfun/password-container-xblock/</a></p>
+                    <img src="./img/password-container-2.png">
+                </section>
+
+
+                <!--Videojs player-->
+                <section>
+                    <h3><i class="fa fa-cube"></i> XBlocks: Videojs player</h3>
+                    <img class="fragment" src="./img/videojs-3.png">
+                </section>
+
+                <!-- III) Issues -->
+                <section>
+                    <div class="dim">
+                        <p><i class="fa fa-plug"></i> Integration with Open edX</p>
+                        <p><i class="fa fa-tachometer"></i> Dashboards</p>
+                        <p><i class="fa fa-cube"></i> XBlocks</p>
+                        <p class="undim"><i class="fa fa-empire"></i> Issues</p>
+                    </div>
+				</section>
+
+                <section data-background="./img/infra.png">
+                </section>
+
+                <section>
+
+                    <h3><i class="fa fa-empire"></i> Explicit dependencies on Amazon Web Services (AWS)</h3>
+
+                    <div class="full-width"><pre class="fragment"><code class="python">def some_view(request):
+    url = get_upload_url()
+    return render(request, "some_template.html", {"url": url})</code></pre></div>
+
+                    <table>
+                        <tr class="fragment">
+                            <td>Hardcoded</td>
+                            <td><pre><code>def get_upload_url():
+    conn = connect_to_s3()
+    return conn.generate_url()</code></pre></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Setting-dependent</td>
+                            <td class="full-width"><pre><code>def get_upload_url():
+    from importlib import import_module
+    name = getattr(
+        settings, "STORAGE_BACKEND",
+        "storage.s3" # default storage
+    )
+    backend = import_module(name).Backend()
+    return backend.generate_url()</code></pre></td>
+                        </tr>
+                    </table>
+                </section>
+                <section data-background="./img/ora2-file-upload-pr.png">
+                </section>
+
+                <section>
+                    <h3><i class="fa fa-empire"></i> Extended course properties</h3>
+                    <pre><code class="python">class CourseFields(object):
+    advanced_modules = List(...)
+    foo = List(...)
+    bar = String(...)
+    ...</code><code class="fragment python" style="color: orange;" data-display-fragment="2">    # Course-specific properties
+    advanced_properties = Dict(...)</code></pre>
+
+                    <pre class="fragment" data-display-fragment="1"><code class="python">class Course(django.models.Model):
+    course_id = django.models.CharField(...)
+    custom_property = django.models.CharField(...)
+    ...
+                    </pre></code>
+                </section>
+
+                <section>
+                    <h3><i class="fa fa-empire"></i> Microsites</h3>
+                    <ul>
+                        <li class="fragment">No microsite in studio</li>
+                        <li class="fragment">Course creation</li>
+                        <li class="fragment">User subscription</li>
+                    </ul>
+                    <div class="fragment">
+                        <hr>
+                        <p>Microsites for white label?</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>What's next?</h3>
+
+                    <p class="fragment" data-fragment-index="1">Themes, course filtering, course search...</p>
+                    <p class="fragment" data-fragment-index="1">
+                        <img src="./img/fun-tomorrow.png">
+                    </p>
+                </section>
+
+                <section>
+                    <h3>What's next?</h3>
+                    <p>Hackathon!</p>
+                    <img src="./img/hackathon-proposal.png">
+                </section>
+
+                <section>
+                    <h3>Get in touch</h3>
+                    <div class="table">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <img src="./img/regis.png">
+                                <p>Developer</p>
+                                <p class="sidespace">regis@openfun.fr</p>
+                            </div>
+                            <div class="table-cell sidespace">
+                                <img src="./img/julien.png">
+                                <p>Developer</p>
+                                <p class="sidespace">julien@openfun.fr</p>
+                            </div>
+                            <div class="table-cell sidespace">
+                                <img src="./img/laurent.png">
+                                <p>Product owner</p>
+                                <p class="sidespace">laurent@openfun.fr</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Slides available at <br>
+                    <a href="https://github.com/regisb/openedx-conference-2015">https://github.com/regisb/openedx-conference-2015</a></p>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/jquery-1.11.3.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+        <script>
+            (function() {
+                $(".population").each(function(index, elt){
+                    var count = parseInt($(elt).attr("data-population"));
+                    for (var i = 0; i < count; i++) {
+                        $(elt).append("<i class='fa fa-user'></i>");
+                    }
+                })
+            })();
+        </script>
+
+	</body>
+</html>
